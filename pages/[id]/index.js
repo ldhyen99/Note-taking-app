@@ -83,9 +83,9 @@ export const getStaticPaths = async () => {
 
     const res = await axios.get(url);
     const { data } = await res.data
-    const ids = data.map(item => item._id)
+    const ids = data?.map(item => item._id)
     // console.log("ids: >>",ids);
-    const paths = ids.map(id => ({ params: { id: id.toString() } }))
+    const paths = ids?.map(id => ({ params: { id: id.toString() } }))
     return {
         paths,
         fallback: false
