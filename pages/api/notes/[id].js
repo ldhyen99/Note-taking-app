@@ -4,7 +4,7 @@ import Note from '../../../models/Note'
 dbConnect()
 
 export default async (req, res) => {
-
+   
     const {
         query: { id },
         method
@@ -51,6 +51,7 @@ export default async (req, res) => {
             break;
         default:
             res.status(400).json({ success: false })
-            break
+            break;
     }
+
 }

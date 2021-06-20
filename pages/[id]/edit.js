@@ -65,6 +65,12 @@ const EditNote = ({ note }) => {
         return err;
     }
 
+
+    function backButton() {
+        router.push("/")
+    }
+
+
     return (
         <div className="form-container">
             <h1>Update Note</h1>
@@ -92,6 +98,7 @@ const EditNote = ({ note }) => {
                                 onChange={handleChange}
                             />
                             <Button type='submit'>Update</Button>
+                            <Button color="yellow" onClick={backButton}>Back</Button>
                         </Form>
                 }
             </div>

@@ -4,8 +4,8 @@ import Note from '../../../models/Note'
 dbConnect()
 
 export default async (req, res) => {
-    const { method } = req
 
+    const { method } = req
     switch (method) {
         case 'GET':
             try {
@@ -29,4 +29,5 @@ export default async (req, res) => {
             res.status(400).json({ success: false })
             break   
     }
+
 }
